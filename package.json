@@ -1,0 +1,18 @@
+{
+  "name": "applitools_hackaton",
+  "version": "1.0.0",
+  "description": "Applitools Hackaton by Sergio Blanco",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:verify": "cypress verify",
+    "cypress:version": "cypress version"
+  },
+  "author": "Sergio Blanco",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^3.6.1"
+  }
+}
