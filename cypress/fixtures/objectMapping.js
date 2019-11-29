@@ -20,6 +20,24 @@ module.exports = {
             twitter: `.buttons-w`,
             facebook: `:nth-child(2) > img`,
             linkedin: `:nth-child(3) > img`
-        }
+        },
+        alert: `.alert`
+    },
+    app: {
+        transactionsTable: `#transactionsTable`,
+        transactionTable: {
+            amountTitle: `#amount`,
+            amountsRow: `tbody td.text-right`,
+            rowsData: `:nth-child(1)`,
+            descriptionRow: `.cell-with-media`
+        },
+        showExpensesChart: `#showExpensesChart`
+    },
+    chart: {
+        canvas: `#canvas`
+    },
+    add: {
+        flashSale: `#flashSale`,
+        flashSaleTwo: `#flashSale2`
     }
 }

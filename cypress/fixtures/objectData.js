@@ -21,5 +21,10 @@ module.exports = {
             facebookSource: `img/social-icons/facebook.png`,
             linkedinSource: `img/social-icons/linkedin.png`
         }
+    },
+    alert: {
+        noUsernamePassword: `Both Username and Password must be present `,
+        noPassword: `Password must be present`,
+        noUsername: `Username must be present`
     }
 }
