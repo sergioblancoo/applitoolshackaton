@@ -34,7 +34,8 @@ module.exports = {
         showExpensesChart: `#showExpensesChart`
     },
     chart: {
-        canvas: `#canvas`
+        canvas: `#canvas`,
+        nextYear: `#addDataset`
     },
     add: {
         flashSale: `#flashSale`,

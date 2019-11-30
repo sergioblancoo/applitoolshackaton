@@ -1,11 +1,12 @@
 const { mainData } = require('../fixtures/dataInputs.js')
 const { loginForm, app, chart, add } = require('../fixtures/objectMapping.js')
 const { loginFormData, alert } = require('../fixtures/objectData.js')
+const versionUrl = Cypress.env('v2') ? mainData.urlV2 : mainData.url;
 
 describe('Login Form UI Elements', () =>  {
     beforeEach(() =>  {
         /// Navigate to URL
-        cy.visit(mainData.url)
+        cy.visit(versionUrl)
         /// Assert that the page title is the expected by checking the page title
         cy.title().should('eq', mainData.titlePage)
     })
@@ -57,7 +58,7 @@ describe('Login Form UI Elements', () =>  {
 describe('Data-Driven Test', () =>  {
     beforeEach(() =>  {
         /// Navigate to URL
-        cy.visit(mainData.url)
+        cy.visit(versionUrl)
     })
 
     it(`Test error message when no Username nor Password provided`, () => {
@@ -88,7 +89,7 @@ describe('Data-Driven Test', () =>  {
 describe('Table Sort Test', () =>  {
     beforeEach(() =>  {
         /// Navigate to URL
-        cy.visit(mainData.url)
+        cy.visit(versionUrl)
         cy.login({ username: mainData.username, password: mainData.password })
         cy.get(app.transactionsTable).should('be.visible')
     })
@@ -124,7 +125,7 @@ describe('Table Sort Test', () =>  {
 describe('Canvas Chart Test', () =>  {
     beforeEach(() =>  {
         /// Navigate to URL
-        cy.visit(mainData.url)
+        cy.visit(versionUrl)
         cy.login({ username: mainData.username, password: mainData.password })
         cy.get(app.transactionsTable).should('be.visible')
     })
@@ -139,7 +140,7 @@ describe('Canvas Chart Test', () =>  {
 describe('Dynamic Content Test', () =>  {
     beforeEach(() =>  {
         /// Navigate to URL
-        cy.visit(mainData.urlAdds)
+        cy.visit(`${versionUrl}?showAd=true`)
         cy.login({ username: mainData.username, password: mainData.password })
         cy.get(app.transactionsTable).should('be.visible')
     })

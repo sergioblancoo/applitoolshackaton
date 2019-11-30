@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
+    "cypress:runV2": "cypress run --env v2=true",
     "cypress:verify": "cypress verify",
     "cypress:version": "cypress version"
   },
