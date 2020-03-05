@@ -4,7 +4,7 @@
 
 Start by cloning the project.
 ```
-git clone https://github.com/<your_username>/applitoolshackaton.git
+git clone https://github.com/sergioblancoo/applitoolshackaton.git
 ```
 Once you have the repo, install dependencies with:
 ```
